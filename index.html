@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
        	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
@@ -17,7 +16,7 @@
 
 <div class="mainContainer" id="mainContainer" data-ng-app="TutorialsApp">
 
-<center><h1>AngularJS Tutorials</h1></center>
+<center><h1>Tutorials</h1></center>
 
 <center><div data-ng-controller="tutorialsCtrl">
 <table id="table" class="table table-striped">
@@ -26,15 +25,15 @@
                         <th>Image</th>
                         <th>Title</th>
                         <th>Author</th>
-                        <th>Link</th>
+                        <th>URL</th>
                 </tr>
         </thead>
         <tbody>
-                <tr data-ng-repeat="informative in informatives">
-                        <td><img ng-src="{{informative.image}}" /></td>
-                        <td>{{informative.title}}</td>
-                        <td>{{informative.author}}</td>
-                        <td><a ng-href="{{informative.url}}">Start This Tutorial</a></td>
+                <tr data-ng-repeat="tutorial in tutorials">
+                        <td><img ng-src="{{tutorial.image}}" /></td>
+                        <td>{{tutorial.title}}</td>
+                        <td>{{tutorial.author}}</td>
+                        <td><a ng-href="{{tutorial.url}}">Click here to learn!</a></td>
                 </tr>
         </tbody>
 </table>
