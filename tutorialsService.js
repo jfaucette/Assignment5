@@ -14,4 +14,12 @@ app.service("tutorialsService", function($http, $q)
   }
 })
 
-
+.controller("tutorialsCtrl", function ($scope, tutorialsService)
+{
+  var promise = tutorialsService.getTutorials();
+  promise.then(function (data)
+  {
+    $scope.tutorials = data.data;
+    console.log($scope.tutorials);
+  });
+})
