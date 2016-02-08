@@ -51,8 +51,10 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">What is Angular.js?</h2>
+            <h1 class="blog-post-title">What is Angular.js?</h1>  
             <p class="blog-post-meta">February 8, 2016 by <a href="aboutme.html">Javoni</a></p>
+            <hr>  
+            <img src="http://filter-angular.com/img/angular-js.png">  
             <hr>
             <p><p class="lead">Angular is a way to extend the HTML language in a way that offers dynamic views. HTML only offers static views. I explain the basics by going through the steps of my most recent Angular application. Follow along with my code in github by clicking on AngularJs(code) in the navigation bar at the top.</p>
             <p>After extensive Googling here is my process...</p>  
@@ -63,7 +65,7 @@
 		    <p>The last thing in the tutorialsService.js file is the creation of the controller, tutorialsCtrl. This controller has a function that accepts two parameters, $scope and the all of the information in the tutorialsService app. First the controller calls the promise that the deferred variable made which contains all of the data from the json file and it assigns it to the scope and finally displays the information to the console just to confirm that all of the information is being processed correctly into the controller.</p>  
             <p>The final part of this angular app is in the body of the table in our index.html form. data-ng-repeat="informative in informatives" loops through each tutorial object in the json file and displays them in the corresponding columns inside the curly brackets. For instance {{informative.title}} calls the title of each tutorial and displays it inside the table data tags</p>
             <blockquote>
-              <p>To visually see what I've done using Angular.js, <a href="https://github.com/jfaucette/Assignment5" target="_blank">click here.</a></p>
+              <p>To visually see what I've done using Angular.js, <a href="https://github.com/jfaucette/Assignment5" target="_blank">click here.</a> To view the published page <a href="https://jfaucette.github.io/Assignment5" target="_blank">click here.</a></p>
             </blockquote>
            
           </div>
