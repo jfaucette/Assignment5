@@ -51,3 +51,7 @@
 footer {
     margin: 50px 0;
 }
+
+#container {
+    align-content: center;
+}
