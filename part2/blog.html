@@ -42,7 +42,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">Whatcha Doin'?</h1>
+        <h1 class="blog-title">A Little Bit of Somethin'</h1>
         <p class="lead blog-description">Here I will introduce different frameworks and explain my assignments. Don't get too bored...</p>
       </div>
 
@@ -51,39 +51,24 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">What is Angular.js</h2>
-            <p class="blog-post-meta">February 8, 2016 by <a href="#">Javoni</a></p>
-
-            <p>In this post, I am going to introduce angular and explain what it is, what it does, why to use it, and why it's helpful.</p>
+            <h2 class="blog-post-title">What is Angular.js?</h2>
+            <p class="blog-post-meta">February 8, 2016 by <a href="aboutme.html">Javoni</a></p>
             <hr>
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p><p class="lead">Angular is a way to extend the HTML language in a way that offers dynamic views. HTML only offers static views. I explain the basics by going through the steps of my most recent Angular application. Follow along with my code in github by clicking on AngularJs(code) in the navigation bar at the top.</p>
+            <p>After extensive Googling here is my process...</p>  
+            <h2>My Process...</h2>  
+            <p>First I created a file called tutorialsService.js where I create an app that will take my tutorials.json file and turn all of the json strings into html objects that will be displayed in a table. </p>
+            <p>I created a service in the app called tutorialsService which is a function that accepts two parameters: $http and $q. $http allows us to call to our tutorials.json file and $q.defer() is stored in a variable called deferred. This means that anything can be stored in the variable deferred so whatever information is stored in that variable can be used later. In this case I store the data from our json file in the deferred variable. All of that is done in this statement:  var deferred = $q.defer(); $http.get("tutorials.json").then(function (data) {deferred.resolve(data);});</p>
+            <p>The next function is called getInformatives and it will return all of the information that is stored in the deferred variable.</p>
+		    <p>The last thing in the tutorialsService.js file is the creation of the controller, tutorialsCtrl. This controller has a function that accepts two parameters, $scope and the all of the information in the tutorialsService app. First the controller calls the promise that the deferred variable made which contains all of the data from the json file and it assigns it to the scope and finally displays the information to the console just to confirm that all of the information is being processed correctly into the controller.</p>  
+            <p>The final part of this angular app is in the body of the table in our index.html form. data-ng-repeat="informative in informatives" loops through each tutorial object in the json file and displays them in the corresponding columns inside the curly brackets. For instance {{informative.title}} calls the title of each tutorial and displays it inside the table data tags</p>
             <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p>To visually see what I've done using Angular.js, <a href="https://github.com/jfaucette/Assignment5" target="_blank">click here.</a></p>
             </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <h2>Heading</h2>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <pre><code>Example code block</code></pre>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            <ol>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-            </ol>
-            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-          </div><!-- /.blog-post -->
+           
+          </div>
 
-          <div class="blog-post">
+<!--          <div class="blog-post">
             <h2 class="blog-post-title">Another blog post</h2>
             <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
 
@@ -93,7 +78,7 @@
             </blockquote>
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div><!-- /.blog-post -->
+          </div>
 
           <div class="blog-post">
             <h2 class="blog-post-title">New feature</h2>
@@ -107,7 +92,7 @@
             </ul>
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
+          </div>-->
 
           <nav>
             <ul class="pager">
@@ -119,35 +104,25 @@
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/jfaucette">GitHub</a></li>
+              <li><a href="https://twitter.com/jfaucette7">Twitter</a></li>
+            </ol>
           </div>
           <div class="sidebar-module">
             <h4>Archives</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
+              <li><a href="#">January 2016</a></li>
+              <li><a href="#">February 2016</a></li>
+              <li><a href="#">March 2016</a></li>
+              <li><a href="#">April 2016</a></li>
+              <li><a href="#">May 2016</a></li>
+
             </ol>
           </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
+          
         </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
@@ -155,7 +130,7 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>, edited by <a href="https://github.com/jfaucette">Javoni Faucette</a>.</p>
       <p>
         <a href="#">Back to top</a>
       </p>
