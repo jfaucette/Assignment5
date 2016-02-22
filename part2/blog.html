@@ -69,7 +69,6 @@
             <h2>Non-Blocking IO?</h2>    
             <p>non-blocking servers like ones ones made in Node, only use one thread to service all requests. This means an instance of Node makes the most out of a single thread. The creators designed it with the premise that the I/O and network operations are the bottleneck.</p>
             <p>When requests arrive at the server, they are serviced one at a time. However, when the code serviced needs to query the DB for example, it sends the callback to a second queue and the main thread will continue running (it doesn't wait). Now when the DB operation completes and returns, the corresponding callback pulled out of the second queue and queued in a third queue where they are pending execution. When the engine gets a chance to execute something else (like when the execution stack is emptied), it picks up a callback from the third queue and executes it.</p>  
-            <p>The final part of this angular app is in the body of the table in our index.html form. data-ng-repeat="tutorial in tutorials" loops through each tutorial object in the json file and displays them in the corresponding columns inside the double curly brackets.</p>
           </div>  
             
           <div class="blog-post">
